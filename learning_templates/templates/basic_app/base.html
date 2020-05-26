@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light navbar-static-top navbar-expand-sm">
+      <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+<div class="container">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="nav-link" href="{% url 'index'%}">BRAND</span></a>
+          </li>
+          <li>
+            <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+          </li>
+          <li>
+            <a class="nav-link" href="{% url 'basic_app:other' %}">Other</a>
+          </li>
+          <li>
+            <a class="nav-link" href="{% url 'basic_app:relative' %}">Relative</a>
+          </li>
+        </ul>
+      <!-- </div> -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      {% block body_block %}
+      <!-- Anything outside of this will be inherited if you extend -->
+      {% endblock %}
+
+    </div>
+
+  </body>
+</html>
